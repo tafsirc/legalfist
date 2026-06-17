@@ -413,7 +413,7 @@ export function emdash(config: EmDashConfig = {}): AstroIntegration {
 				});
 
 				// Inject all core routes
-				injectCoreRoutes(injectRoute);
+				injectCoreRoutes(injectRoute, { srcDir: astroConfig.srcDir });
 
 				// Inject routes from pluggable auth providers (authProviders config)
 				if (resolvedConfig.authProviders?.length) {
